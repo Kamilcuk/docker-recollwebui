@@ -1,0 +1,13 @@
+# Example
+version: "3"
+services:
+  recollwebui:
+    container_name: recollwebui
+    ports:
+      - 0.0.0.0:8080:8080
+    build: .
+    volumes:
+      - /share:/share:ro
+      - /share/.recoll:/.recoll:rw
+    environment:
+      - RECOLL_CONFDIR=/.recoll
