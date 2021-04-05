@@ -29,3 +29,9 @@ EXPOSE 8080
 COPY supervisord.conf /etc/supervisord.conf
 CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
 
+# Chagne this to the user you want to have.
+RUN set -x && \
+	groupadd -g 1200 share && \
+	useradd -g 1200 -u 1200 --create-home share
+USER 1200:1200
+
