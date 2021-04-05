@@ -23,6 +23,8 @@ RUN set -x && \
 		libxslt perl-image-exiftool antiword pstotext \
 		# Dependency for recoll-webui.
 		python-waitress \
+		# Tells me it will be faster.
+		python-ujson \
 		# Stuff I use
 		git supervisor \
 		&& \
