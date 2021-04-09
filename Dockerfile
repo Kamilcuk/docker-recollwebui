@@ -27,6 +27,8 @@ RUN set -x && \
 		python-ujson \
 		# Stuff I use
 		git supervisor \
+		# Also recoll depends
+		diffutils \
 		&& \
 	git clone https://framagit.org/medoc92/recollwebui /recollwebui && \
 	# Cleanup
